@@ -13,9 +13,35 @@
 
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
-        <button type="button" (click)="onMonthRangeTap(3)">3 Months</button>
-        <button type="button" (click)="onMonthRangeTap(6)">6 Months</button>
-        <button type="button" (click)="onMonthRangeTap(12)">1 Year</button>
+        <kendo-buttongroup selection="single">
+          <button
+            kendoButton
+            icon="calendar"
+            type="button"
+            [toggleable]="true"
+            (click)="onMonthRangeTap(3)"
+          >
+            3 Months
+          </button>
+          <button
+            kendoButton
+            type="button"
+            icon="calendar"
+            [toggleable]="true"
+            (click)="onMonthRangeTap(6)"
+          >
+            6 Months
+          </button>
+          <button
+            kendoButton
+            type="button"
+            icon="calendar"
+            [toggleable]="true"
+            (click)="onMonthRangeTap(12)"
+          >
+            1 Year
+          </button>
+        </kendo-buttongroup>
       </div>
     </div>
   </div>
