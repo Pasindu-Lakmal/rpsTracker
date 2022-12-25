@@ -10,8 +10,6 @@ import { DashboardModule } from "./modules/dashboard/dashboard.module";
 
 import { AppComponent } from "./app.component";
 import { SharedModule } from "./shared/shared.module";
-import { InputsModule } from '@progress/kendo-angular-inputs';
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,8 +22,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
     DashboardModule,
     BacklogModule,
     BrowserAnimationsModule,
-    InputsModule,
   ],
+
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -37,43 +37,25 @@
   <div class="modal-body">
     <form>
       <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Title</label>
-        <div class="col-sm-10">
-          <input
-            class="form-control"
-            [(ngModel)]="newItem.title"
-            name="title"
-          />
-        </div>
+        <kendo-floatinglabel text="Title">
+          <input kendoTextBox [(ngModel)]="newItem.title" name="title" />
+        </kendo-floatinglabel>
       </div>
 
       <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Description</label>
-        <div class="col-sm-10">
+        <kendo-floatinglabel text="Description">
           <textarea
-            class="form-control"
+            kendoTextArea
             [(ngModel)]="newItem.description"
             name="description"
           ></textarea>
-        </div>
+        </kendo-floatinglabel>
       </div>
 
       <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Item Type</label>
-        <div class="col-sm-10">
-          <select
-            class="form-control"
-            [(ngModel)]="newItem.type"
-            name="itemType"
-          >
-            <option
-              *ngFor="let itemType of itemTypesProvider"
-              [ngValue]="itemType"
-            >
-              {{ itemType }}
-            </option>
-          </select>
-        </div>
+        <kendo-floatinglabel text="Item Type">
+          <kendo-dropdownlist [data]="itemTypesProvider"> </kendo-dropdownlist>
+        </kendo-floatinglabel>
       </div>
     </form>
   </div>
